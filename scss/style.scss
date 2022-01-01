@@ -1,0 +1,108 @@
+@import "variable";
+@import "mixin";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body,h3,a,p,div{
+    font-family: poppins;
+}
+body{
+    background-color: $mutedWhite !important;
+}
+.header
+{
+    background-color: $purple;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 100px;
+}
+.head
+{
+    align-self: center;
+    color: $white;
+}
+.navLinks{
+    align-self: center;
+}
+li
+{
+    display: inline;
+    margin-left: 15px;
+    a{
+        text-decoration: none;
+        color: $mutedWhite;
+        &:hover{
+            color: $white;
+        }
+    }
+}
+.navBox
+{
+    display: flex;
+}
+.logo{
+    margin-left: 20px;
+}
+.landing{
+    display: flex;
+    padding: 20px 100px;
+    background-color: $mutedWhite;
+    justify-content: space-between;
+}
+.coursesBox{
+    background-color: $white;
+    padding: 40px 50px;
+    border-radius: $radius;
+    .courseBox{
+        @include courseStyle;
+    }
+}
+.aboutBox{
+    background-color: $white;
+    border-radius: $radius;
+    padding: 30px 100px;
+    text-align: center;
+    P{
+        margin-top: 8px;
+        width: 600px;
+    }
+}
+.blogBoxs{
+    background-color: $mutedWhite;
+    padding: 0px 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .blogBox{
+        padding: 20px;
+        border-radius: $radius;
+        background-color: $white;
+        p{
+            width: 250px;
+            margin-top: 10px;
+        }
+        a{
+            text-decoration: none;
+            color: $purple;
+            border: 1px solid $purple;
+            border-radius: $radius;
+            padding: 5px 10px;
+            &:hover{
+                background-color: $purple;
+                color: $white;
+                transition: all 0.4s;
+            }
+        }
+    }
+}
+.footer{
+    background-color: $white;
+    display: flex;
+    padding: 30px 100px 0px;
+    color: $white;
+    justify-content: space-between;
+}
